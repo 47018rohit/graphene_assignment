@@ -1,0 +1,99 @@
+@import "../../App.scss";
+
+#products-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 815px;
+  background-color: $grey100;
+  box-sizing: border-box;
+  padding: 69px 90px;
+}
+.productTitle {
+  border-bottom: 1px solid $grey1000;
+  width: max-content;
+}
+
+.productTitle > h2 {
+  margin: 0px;
+  font-family: $fontPrimary;
+  font-size: $sizeH2;
+  font-weight: $weight600;
+}
+#products-wrapper > img {
+  position: absolute;
+  top: 10.35rem;
+  left: 5rem;
+}
+
+.product-categories {
+  position: absolute;
+  width: max-content;
+  font-family: $fontSecondary;
+  font-size: $size18;
+  font-weight: $weight400;
+}
+.product-categories > p {
+  margin-top: 25px;
+  cursor: pointer;
+}
+.highlight {
+  transition: all ease-in-out 300ms;
+  font-size: 26px;
+}
+.product-section{
+
+    button {
+        position: absolute;
+        top: 7.5rem;
+        min-width: 20px;
+        max-width: max-content;
+        min-height: 15px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+      }
+}
+.product-cards {
+  position: absolute;
+  min-width: 304px ;
+  max-width: 1026px;
+  top: 12.75rem;
+  left: 26rem;
+  display: flex;
+  gap: 26px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;  
+}
+.card > img:first-child {
+  width: 304px;
+  height: 322px;
+  filter: grayscale(100%);
+}
+.card>img:nth-child(2){
+    position: relative;
+    top: -3rem; left: 16rem;
+    cursor: pointer;
+}
+.prev-btn {
+  left: 75rem;
+}
+.next-btn {
+  left: 82rem;
+}
+.details{
+    max-width: 304px;
+    min-height: 125px;
+    max-height: 125px;
+    font-family: $fontSecondary;
+    color: $grey200;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.details>h6{
+    font-family: $fontPrimary;
+    font-weight: $weight600;
+    font-size: 26px;
+    margin: 0px;
+    color: $grey1000;
+}

@@ -9,8 +9,11 @@ $grey200: #626262;
 $fontPrimary: "Syne", sans-serif;
 $fontSecondary: "Work Sans", sans-serif;
 $fontLogo: "Poppins", sans-serif;
+
 $weight800: 800;
 $weight600: 600;
+$weight400: 400;
+
 $sizeH1: 135px;
 $sizeH2: 90px;
 $sizeSub: 26px;
@@ -21,4 +24,13 @@ $size18: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+body {
+  max-width: 1440px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
 }

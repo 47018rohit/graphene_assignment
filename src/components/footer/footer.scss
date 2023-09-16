@@ -1,0 +1,19 @@
+@import '../../App.scss';
+
+#footer-wrapper{
+    width: 100%;
+    max-height: 66px;
+    min-height: 66px;
+    position: relative;
+    bottom: -50.03rem;
+    background-color: $grey400;
+    color: $grey100;
+    box-sizing: border-box;
+    padding: .65rem;
+    font-family: $fontSecondary;
+    font-size: 12px;
+    
+    p{
+        text-align: center;
+    }
+}

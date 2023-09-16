@@ -5,6 +5,8 @@ const Home = () => {
   let [menuSelected, setMenuSelected] = useState("");
   let [toggle, setToggle] = useState(false);
 
+  
+
   const navbarMenu = [
     { name: "Home", id: "home" },
     { name: "About", id: "about" },

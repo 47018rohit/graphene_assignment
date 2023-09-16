@@ -1,0 +1,67 @@
+@import "../../App.scss";
+
+#contact-wrapper {
+  position: relative;
+  top: 50rem;
+  width: 100%;
+  height: 520px;
+  background-image: url(/18591063.png);
+  box-sizing: border-box;
+  padding: 69px 90px;
+
+  h1 {
+    position: absolute;
+    font-family: $fontPrimary;
+    font-size: $sizeH1;
+    color: $grey100;
+    margin: 0px;
+    line-height: 0.74;
+    bottom: 2rem;
+  }
+}
+
+.newsletter{
+    font-family: $fontSecondary;
+    color: $grey200;
+    max-width: 370px;
+    word-wrap: break-word;
+    font-size: $size18;
+    h2{
+        font-family: $fontPrimary;
+        font-size: 26px;
+        font-weight: $weight600;
+        margin: 0px;
+    }
+}
+
+.contact-form{
+    position:relative ;
+    top: -7.75rem; left: 610px;
+    display: flex;
+    flex-direction: column;
+    font-family: $fontSecondary;
+    
+    input{
+        max-width: 558px ;
+        font-size: $size18;
+        font-family: $fontSecondary;
+        padding: 1rem;
+        color: $grey100;
+        background-color: inherit;
+        border: none;
+        border-bottom: 1px solid $grey200;
+        outline: none;
+    }
+
+    button{
+        position: relative;
+        top: 2.5rem; left: 463px;
+        border: 2px solid $primaryColor;
+        width: 181px; height: 181px;
+        border-radius: 50%;
+        background-color: inherit;
+        color: $primaryColor;
+        font-size: 26px;
+        font-weight: $weight400;
+    };
+}

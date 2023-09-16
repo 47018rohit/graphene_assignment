@@ -2,7 +2,7 @@ import axios from "axios"
 import { useCallback, useEffect, useState } from "react"
 
 
-const useFetchData = (e) => {
+const useFetchCategory = (e) => {
     const [data, setData] = useState()
    
     const fetchData = useCallback(async()=>{
@@ -18,4 +18,4 @@ const useFetchData = (e) => {
     return  data
 }
 
-export default useFetchData
+export default useFetchCategory

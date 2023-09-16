@@ -1,5 +1,5 @@
 
-import { Home, Navbar, Products, Contact } from "./components";
+import { Home, Navbar, Products, Contact, Footer } from "./components";
 import "./App.scss";
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
       <Home />
       <Products />
       <Contact />
+      <Footer/>
     </>
   );
 }
