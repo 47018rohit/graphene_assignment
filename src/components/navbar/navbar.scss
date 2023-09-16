@@ -1,0 +1,38 @@
+@import "../../App.scss";
+
+
+
+.navbar-wrapper {
+  position: sticky;
+  @include display-flex;
+  height: 42px;
+  justify-content: space-between;
+  background-color: $grey400;
+  box-sizing: border-box;
+  padding: 0px 90px;
+  color: $grey200;
+  font-family: $fontSecondary;
+
+  a {
+    text-decoration: none;
+    color: $grey200;
+    &:hover{
+        color: $grey100;
+    }
+  }
+}
+
+.right-nav {
+  @include display-flex;
+  gap: 10px;
+}
+
+.left-nav {
+  @include display-flex;
+  gap: 30px;
+}
+
+.follow-us {
+  @include display-flex;
+  gap: 12px;
+}

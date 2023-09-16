@@ -1,0 +1,152 @@
+@import "../../App.scss";
+
+#home-wrapper {
+  box-sizing: border-box;
+  padding: 0.25rem 90px;
+  background-color: $grey1000;
+  height: 749px;
+  color: $grey100;
+}
+.navigation {
+  border-bottom: 1px solid $grey200;
+  @include display-flex;
+  justify-content: space-between;
+  p {
+    margin: 0px;
+    font-family: $fontLogo;
+    font-size: 40px;
+    font-weight: 275;
+  }
+  section {
+    @include display-flex;
+    gap: 10px;
+    font-family: $fontSecondary;
+  }
+}
+
+#navbar {
+  @include display-flex;
+  font-family: $fontSecondary;
+  justify-content: flex-start;
+  font-size: $size18;
+  font-weight: 400;
+  margin-top: 20px;
+  gap: 148px;
+  p {
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px 47px;
+  }
+}
+
+.show {
+  display: block;
+  color: #fff;
+
+}
+.hidden {
+  display: none;
+}
+.productMenu{
+  border-bottom: 1px solid $grey100;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+.childMenu  {
+  position: absolute;
+  border: 1px solid $grey100;
+  display: flex;
+  padding: 2.25rem 3rem .25rem .25rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 7.5rem;
+  left: 33.25rem;
+}
+.childMenu>li{
+  margin-top: 7px;
+}
+
+#hero-text>h1{
+  font-family: $fontPrimary;
+  font-size: $sizeH1;
+  margin: 0px;
+}
+#hero-text>h1:nth-child(1){
+  position: absolute;
+  left: 115px;
+  z-index: 5;
+  top: 280px;
+}
+#hero-text>h1:nth-child(2){
+  position: absolute;
+  left: 424px;
+  top: 396px;
+  color: transparent;
+  z-index: 5;
+  -webkit-text-stroke: 1px $grey100;
+}
+#hero-text>h1:nth-child(3){
+  position: absolute;
+  z-index: 5;
+  top: 505px;
+  left: 187px;
+}
+
+.orange-back{
+  position: absolute;
+  background-color: $primaryColor;
+  width: 993px;
+  height: 354.3px;
+  top: 344.62px;
+  left: 447px;
+}
+.model{
+  position: absolute;
+  top: 133.05px;
+  left: 899px;
+}
+.star3{
+  position:absolute ;
+  top: 129px;
+  left: 1010px;
+}
+#hero-text>p{
+  position: absolute;
+  top: 614.9px;
+  left: 1300px;
+  font-size: $size14;
+  font-family: $fontSecondary;
+  color: $grey1000;
+}
+
+.star1{
+  position: absolute;
+  top: 95px;
+  left:521px;
+}
+.star4{
+  position: absolute;
+  top: 620.97px;
+  left:944px;
+}
+#hero-text>div:last-child{
+  width: 959px;
+    border-bottom: 1px solid $grey100;
+    position: absolute;
+    top:666px ;
+    left: 0px;
+}
+
+.seeMore{
+  position: absolute;
+  top: 696px;
+  left: 115px;
+  font-family: $fontSecondary;
+  font-size: $size18;
+  @include display-flex;
+  gap: 8px;
+  cursor: pointer;
+}
