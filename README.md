@@ -1,5 +1,5 @@
 
-# [ShopKart Assignment] (https://graphene-assignment-rk2klwo5h-hakkanoodles.vercel.app)
+# [ShopKart Assignment](https://graphene-assignment-rk2klwo5h-hakkanoodles.vercel.app)
 
 ## Authors
 
