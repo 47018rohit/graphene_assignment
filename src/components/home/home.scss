@@ -6,25 +6,49 @@
   background-color: $grey1000;
   height: 749px;
   color: $grey100;
+  overflow-x: hidden;
+
+  @media (max-width:$mobileWidth) {
+    padding: 1.25rem 20px;
+    height: 682px;
+  }
 }
+
 .navigation {
   border-bottom: 1px solid $grey200;
   @include display-flex;
   justify-content: space-between;
+
   p {
     margin: 0px;
     font-family: $fontLogo;
     font-size: 40px;
     font-weight: 275;
   }
+
   section {
     @include display-flex;
     gap: 10px;
     font-family: $fontSecondary;
   }
-}
 
-#navbar {
+  @media (max-width:$mobileWidth) {
+    p {
+      font-size: 30px;
+    }
+
+    section>span {
+      display: none;
+    }
+  }
+}
+.menu{
+  display: none;
+  @media (max-width:$mobileWidth) {
+    display: block;
+  }
+}
+.navbar {
   @include display-flex;
   font-family: $fontSecondary;
   justify-content: flex-start;
@@ -32,6 +56,7 @@
   font-weight: 400;
   margin-top: 20px;
   gap: 148px;
+
   p {
     cursor: pointer;
     margin: 0px;
@@ -39,15 +64,21 @@
   }
 }
 
+.menuBackground {
+  display: none;
+}
+
 .show {
   display: block;
   color: #fff;
 
 }
+
 .hidden {
   display: none;
 }
-.productMenu{
+
+.productMenu {
   border-bottom: 1px solid $grey100;
 }
 
@@ -55,7 +86,8 @@ li {
   list-style: none;
   cursor: pointer;
 }
-.childMenu  {
+
+.childMenu {
   position: absolute;
   border: 1px solid $grey100;
   display: flex;
@@ -65,37 +97,59 @@ li {
   top: 7.5rem;
   left: 33.25rem;
 }
-.childMenu>li{
+
+.childMenu>li {
   margin-top: 7px;
 }
 
-#hero-text>h1{
+#hero-text>h1 {
   font-family: $fontPrimary;
   font-size: $sizeH1;
   margin: 0px;
 }
-#hero-text>h1:nth-child(1){
+
+#hero-text>h1:nth-child(1) {
   position: absolute;
   left: 115px;
   z-index: 5;
   top: 280px;
+
+  @media (max-width:$mobileWidth) {
+    font-size: 55px;
+    top: 420px;
+    left: 15px;
+  }
 }
-#hero-text>h1:nth-child(2){
+
+#hero-text>h1:nth-child(2) {
   position: absolute;
   left: 424px;
   top: 396px;
   color: transparent;
   z-index: 5;
   -webkit-text-stroke: 1px $grey100;
+
+  @media (max-width:$mobileWidth) {
+    font-size: 55px;
+    top: 468px;
+    left: 98px;
+  }
 }
-#hero-text>h1:nth-child(3){
+
+#hero-text>h1:nth-child(3) {
   position: absolute;
   z-index: 5;
   top: 505px;
   left: 187px;
+
+  @media (max-width:$mobileWidth) {
+    font-size: 55px;
+    top: 520px;
+    left: 41px;
+  }
 }
 
-.orange-back{
+.orange-back {
   position: absolute;
   background-color: $primaryColor;
   width: 993px;
@@ -103,17 +157,34 @@ li {
   top: 344.62px;
   left: 447px;
 }
-.model{
+
+.model {
   position: absolute;
   top: 133.05px;
   left: 899px;
+
+  @media (max-width:$mobileWidth) {
+    top: 124.7px;
+    left: 75px;
+    width: 408px;
+    height: 600px;
+  }
 }
-.star3{
-  position:absolute ;
+
+.star3 {
+  position: absolute;
   top: 129px;
   left: 1010px;
+
+  @media (max-width:$mobileWidth) {
+    top: 130px;
+    left: 205.5px;
+    width: 268px;
+    height: 330px;
+  }
 }
-#hero-text>p{
+
+#hero-text>p {
   position: absolute;
   top: 614.9px;
   left: 1300px;
@@ -122,25 +193,44 @@ li {
   color: $grey1000;
 }
 
-.star1{
+.star1 {
   position: absolute;
   top: 95px;
-  left:521px;
-}
-.star4{
-  position: absolute;
-  top: 620.97px;
-  left:944px;
-}
-#hero-text>div:last-child{
-  width: 959px;
-    border-bottom: 1px solid $grey100;
-    position: absolute;
-    top:666px ;
-    left: 0px;
+  left: 521px;
+
+  @media (max-width:$mobileWidth) {
+    display: none;
+  }
 }
 
-.seeMore{
+.star4 {
+  position: absolute;
+  top: 620.97px;
+  left: 944px;
+
+  @media (max-width:$mobileWidth) {
+    top: 571.17px;
+    height: 81.5px;
+    left: 156.44px;
+    width: 47.5px;
+  }
+}
+
+#hero-text>div:last-child {
+  width: 959px;
+  border-bottom: 1px solid $grey100;
+  position: absolute;
+  top: 666px;
+  left: 0px;
+
+  @media (max-width: $mobileWidth) {
+    top: 611.92px;
+    width: 186px;
+    left: 0px;
+  }
+}
+
+.seeMore {
   position: absolute;
   top: 696px;
   left: 115px;
@@ -149,4 +239,58 @@ li {
   @include display-flex;
   gap: 8px;
   cursor: pointer;
+}
+
+.seeMore>p {
+  margin: 0px;
+}
+
+@media (max-width:$mobileWidth) {
+  .closeMenu {
+    display: none;
+  }
+  .childMenu{
+    display: none;
+  }
+  .openMenu {
+    position: relative;
+    box-sizing: border-box;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    z-index: 12;
+  }
+
+  .showMenuBack {
+    display: block;
+    position: absolute;
+    top: 7rem;
+    left: 0px;
+    width: $mobileWidth;
+    height: 612px;
+    background-color: $grey1000;
+    z-index: 10;
+  }
+
+  .closeMenuBack {
+    display: none;
+  }
+
+  .orange-back {
+    width: $mobileWidth;
+    position: absolute;
+    top: 318.29px;
+    left: 0rem;
+    height: 324px;
+  }
+
+  .price {
+    display: none;
+  }
+
+  .seeMore {
+    top: 660px;
+    left: 20px;
+  }
 }

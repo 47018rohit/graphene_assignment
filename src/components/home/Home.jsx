@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "./home.scss";
+import { SvgIcon } from "@mui/material";
+import { MenuRounded, CloseRounded } from "@mui/icons-material";
 
 const Home = () => {
   let [menuSelected, setMenuSelected] = useState("");
   let [toggle, setToggle] = useState(false);
+  let [menuToggle, setMenuToggle] = useState(false)
 
-  
 
   const navbarMenu = [
     { name: "Home", id: "home" },
@@ -37,20 +39,27 @@ const Home = () => {
         <section>
           <span>{"WISHLIST (0)"}</span>
           <span>{"BAG (0)"}</span>
+          <div className="menu">
+            <SvgIcon
+              onClick={() => setMenuToggle(e => !e)}
+              sx={{ fontSize: '30px' }}
+              component={menuToggle ? CloseRounded : MenuRounded}
+            />
+          </div>
         </section>
         <img src="/Star 1.png" alt="star1" className="star1" />
+        <div className={`menuBackground ${menuToggle ? 'showMenuBack' : "closeMenuBack"}`}></div>
       </nav>
-      <ul id="navbar">
+      <ul className={`navbar ${menuToggle ? 'openMenu' : 'closeMenu'}`} >
         {navbarMenu?.map((e) => (
           <li key={e.name} id={e.id} onClick={() => handleClick(e)}>
             {e.name.toUpperCase()}
             {e.name === "Our Products" ? (
               <ul
-                className={`productMenu ${
-                  menuSelected === navbarMenu[2].name && toggle
-                    ? "show"
-                    : "hidden"
-                }`}
+                className={`productMenu ${menuSelected === navbarMenu[2].name && toggle
+                  ? "show"
+                  : "hidden"
+                  }`}
               >
                 <ul className="childMenu">
                   {e.child?.map((el) => (

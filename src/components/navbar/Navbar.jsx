@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./navbar.scss";
 
 import {
@@ -8,33 +8,32 @@ import {
   LinkedIn,
   Twitter,
 } from "@mui/icons-material";
+import { SvgIcon } from "@mui/material";
 
 const Navbar = () => {
+  const followUs = [FacebookOutlined, LinkedIn, Twitter, Instagram]
+
   return (
     <nav className="navbar-wrapper">
-      <section className="right-nav">
-        <LocalShippingOutlined />
+      <section className="left-nav">
+        <SvgIcon component={LocalShippingOutlined} />
         <p>
-          <span>Free Delivery</span>&nbsp;|&nbsp;
+          <a href="/">Free Delivery</a>&nbsp;|&nbsp;
           <a href="/">Refund Policy</a>
         </p>
       </section>
-      <section className="left-nav">
+      <section className="right-nav">
         <a href="/">Login</a>
         <section className="follow-us">
           <p>Follow US</p>
-          <a href="/">
-            <FacebookOutlined />
-          </a>
-          <a href="/">
-            <LinkedIn />
-          </a>
-          <a href="/">
-            <Twitter />
-          </a>
-          <a href="/">
-            <Instagram />
-          </a>
+          {
+            followUs?.map(e => (
+              <a href="/" key={`${e}`}>
+                <SvgIcon component={e} sx={{fontSize: '15px'}} />
+              </a>
+            ))
+          }
+
         </section>
       </section>
     </nav>

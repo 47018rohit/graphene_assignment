@@ -65,3 +65,29 @@
         font-weight: $weight400;
     };
 }
+
+@media (max-width:$mobileWidth){
+    #contact-wrapper{
+        max-width: $mobileWidth;
+        overflow-x: hidden;
+        padding: 46px 23px;
+        height: 620px;
+        h1{
+            font-size: 55px;
+            bottom: 5rem;
+        }
+    }
+    .newsletter{
+        margin: 1rem auto;
+        text-align: center;
+        width: 80%;
+    }
+
+    .contact-form{
+        top: 1rem; left: 0px;
+        button{
+            top: 1.5rem; left: 204px;
+            transform: scale(.552);
+        }
+    }
+}

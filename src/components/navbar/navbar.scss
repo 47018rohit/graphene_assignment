@@ -16,20 +16,49 @@
   a {
     text-decoration: none;
     color: $grey200;
-    &:hover{
-        color: $grey100;
+
+    &:hover {
+      color: $grey100;
+    }
+  }
+
+  @media (max-width:$mobileWidth) {
+    padding: 0px 20px;
+  }
+
+}
+
+.left-nav {
+  @include display-flex;
+  gap: 10px;
+
+  @media (max-width:$mobileWidth) {
+    font-size: 10px;
+    gap: 10px;
+
+    SvgIcon {
+      font-size: 10px;
     }
   }
 }
 
 .right-nav {
   @include display-flex;
-  gap: 10px;
-}
-
-.left-nav {
-  @include display-flex;
   gap: 30px;
+  font-size: 12px;
+
+  @media (max-width:$mobileWidth) {
+    font-size: 10px;
+    gap: 10px;
+
+    .follow-us>p{
+      display: none;
+    }
+    .follow-us{
+      gap: 7px;
+    }
+  }
+
 }
 
 .follow-us {
