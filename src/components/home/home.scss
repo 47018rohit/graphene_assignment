@@ -7,8 +7,9 @@
   height: 749px;
   color: $grey100;
   overflow-x: hidden;
-
+  
   @media (max-width:$mobileWidth) {
+    max-width: $mobileWidth;
     padding: 1.25rem 20px;
     height: 682px;
   }
